@@ -1,6 +1,6 @@
-# Discord AI Chatbot 🤖
+# 한국어 Discord AI Chatbot 🤖
 #### Your Discord AI Companion!
-
+https://www.youtube.com/watch?v=yhBiVrigWNI
 ![Image](https://cdn.discordapp.com/attachments/1119920576417513472/1127122563982688296/image.png)
 ![Image](https://cdn.discordapp.com/attachments/1119920576417513472/1127134209169969253/image.png)
 
