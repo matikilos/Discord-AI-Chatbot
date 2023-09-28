@@ -4,25 +4,25 @@ MAX_SEARCH_RESULTS: 4 # Set the maximum search results for internet access DONT 
 ALLOW_DM: true # Set to true to allow direct messages
 SMART_MENTION: true # Set to true to enable smart mention feature
 
-GPT_MODEL: gpt-3.5-turbo-16k-0613 # Model used for chat completion
+GPT_MODEL: gpt-3.5-turbo-instruct-0914 # Model used for chat completion
 
 MAX_HISTORY: 8 # Set the maximum message history
 
 PRESENCES_CHANGE_DELAY: 8 # Please note that the Presences Change Delay is measured in seconds. It is advisable not to set it too low, as doing so may result in your bot being rate-limited by Discord
 AI_NSFW_CONTENT_FILTER: true # Enable NSFW AI detector to detect NSFW prompt on Imagine Command
 
-LANGUAGE: en # Specify the language code (check 'lang' folder for valid codes)
+LANGUAGE: kr # Specify the language code (check 'lang' folder for valid codes)
 
-INSTRUCTIONS: ai-joe # Specify the instruction prompt to use (check 'instructions' folder for valid prompts)
+INSTRUCTIONS: ai-dooji # Specify the instruction prompt to use (check 'instructions' folder for valid prompts)
 # To add custom prompts, create a .txt file like 'custom.txt' in `instructions` folder and set INSTRUCTIONS as 'custom'
 
-Discord: https://discord.gg/6MT3CZauT8
+Discord: https://discord.gg/Nb9Ky3zY
 Github: https://github.com/mishalhossin/Discord-AI-Chatbot
 
 TRIGGER:
   - chatbot
-  - ai joe
-  - joe
+  - ai 두지
+  - 두지
   - hi
   - bot nickname
   - bot alias

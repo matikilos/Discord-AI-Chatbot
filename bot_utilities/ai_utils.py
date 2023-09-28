@@ -219,7 +219,8 @@ def trigger_github_weekly_trending_repo_scrape():
     headers = {"Authorization": "Bearer ec2cc08b-3343-47c9-9dd3-dc5d40d4aa3b:dead067b-d485-496d-a3e0-4902339f6cfe"}
 
     response = requests.request("POST", url, json=payload, headers=headers)
-
+    print('response.json()' ,  response.json())
+    
     print("id: ", response.json()["result"]["id"], "is :", response.text)
     return response.json()["result"]["id"]
 
