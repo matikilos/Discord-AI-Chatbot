@@ -52,28 +52,28 @@ current_language = load_current_language()
 instruction = {}
 load_instructions(instruction)
 
-CHIMERA_GPT_KEY = os.getenv('CHIMERA_GPT_KEY')
+# CHIMERA_GPT_KEY = os.getenv('CHIMERA_GPT_KEY')
 
-def fetch_chat_models():
-    models = []
-    headers = {
-        'Authorization': f'Bearer {CHIMERA_GPT_KEY}',
-        'Content-Type': 'application/json'
-    }
+# def fetch_chat_models():
+#     models = []
+#     headers = {
+#         'Authorization': f'Bearer {CHIMERA_GPT_KEY}',
+#         'Content-Type': 'application/json'
+#     }
 
-    response = requests.get('https://api.naga.ac/v1/models', headers=headers)
-    if response.status_code == 200:
-        ModelsData = response.json()
-        for model in ModelsData.get('data'):
-            if "chat" in model['endpoints'][0]:
-                models.append(model['id'])
-    else:
-        print(f"Failed to fetch chat models. Status code: {response.status_code}")
+#     response = requests.get('https://api.naga.ac/v1/models', headers=headers)
+#     if response.status_code == 200:
+#         ModelsData = response.json()
+#         for model in ModelsData.get('data'):
+#             if "chat" in model['endpoints'][0]:
+#                 models.append(model['id'])
+#     else:
+#         print(f"Failed to fetch chat models. Status code: {response.status_code}")
         
-    return models
+#     return models
 
-chat_models = fetch_chat_models()
-model_blob = "\n".join(chat_models)
+# chat_models = fetch_chat_models()
+# model_blob = "\n".join(chat_models)
 
 
 @bot.event
@@ -89,7 +89,7 @@ async def on_ready():
     print(f"Invite link: {invite_link}")
     print()
     print()
-    print(f"\033[1;38;5;202mAvailable models: {model_blob}\033[0m")
+    # print(f"\033[1;38;5;202mAvailable models: {model_blob}\033[0m")
     print(f"\033[1;38;5;46mCurrent model: {config['GPT_MODEL']}\033[0m")
 
     # Start the scheduler task
@@ -539,14 +539,15 @@ async def scheduler():
 
             print(scheduled_channels)
 
-        if scheduled_channels:
-            report = generate_trending_git_report()
+        # if scheduled_channels:
+            # TODO : 잠시 쉰다. 
+            # report = generate_trending_git_report()
 
-            for channel_id in scheduled_channels:
-                channel = bot.get_channel(channel_id)
-                if channel:
+            # for channel_id in scheduled_channels:
+                # channel = bot.get_channel(channel_id)
+                # if channel:
                     # Send the message
-                    await channel.send(report)
+                    # await channel.send(report)
 
 
         # for channel_id in scheduled_channels:
